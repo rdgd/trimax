@@ -1,0 +1,8 @@
+{:paths ["src"]
+ :deps {re-frame/re-frame {:mvn/version "1.1.1"}}
+ :aliases {:jar {:extra-deps  {seancorfield/depstar  {:mvn/version  "RELEASE"}}
+                 :main-opts  ["-m"  "hf.depstar.jar"]}
+           :install  {:extra-deps  {deps-deploy  {:mvn/version  "RELEASE"}}
+                      :main-opts  ["-m"  "deps-deploy.deps-deploy"  "install"]}
+           :deploy  {:extra-deps  {deps-deploy  {:mvn/version  "RELEASE"}}
+                     :main-opts  ["-m"  "deps-deploy.deps-deploy"  "deploy"]}}}
